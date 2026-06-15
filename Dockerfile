@@ -10,8 +10,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /workspace
 
-COPY requirements.txt .
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install \
+    demucs==4.0.1 \
+    torch==2.3.0 \
+    torchaudio==2.3.0 \
+    boto3==1.34.0
 
 COPY handler.py .
 
