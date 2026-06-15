@@ -23,4 +23,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/zdravk00/pancake-studio-serverless-mvp/demucs-worker:fix-boto3
+          tags: |
+            ghcr.io/zdravk00/pancake-studio-serverless-mvp/demucs-worker:latest
+            ghcr.io/zdravk00/pancake-studio-serverless-mvp/demucs-worker:fix-boto3
